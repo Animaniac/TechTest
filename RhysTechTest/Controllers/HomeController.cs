@@ -20,15 +20,14 @@ namespace RhysTechTest.Controllers
             var peoplesData = techTestDataBase.People.Select(p => new { p.PersonId, p.FirstName, p.LastName, p.IsAuthorised, Colours = p.Colours.Select(c => c.Name), p.IsEnabled }).ToList();
             return Json(peoplesData, JsonRequestBehavior.AllowGet);
         }
-        [HttpGet]
-        public ActionResult UpdatePerson(int PersonId)
+        
+        public ActionResult GetPersonById(int PersonId)
         {
             var specificPerson = techTestDataBase.People.Where(f => f.PersonId == PersonId).First();
 
-            return View(specificPerson);
+            return Json(new { specificPerson = specificPerson}, JsonRequestBehavior.AllowGet);
         }
-
-        [HttpPost]
+        
         public ActionResult UpdatePerson(People newDetails)
         {
             {
@@ -36,7 +35,7 @@ namespace RhysTechTest.Controllers
                 techTestDataBase.Entry(newDetails).State = System.Data.Entity.EntityState.Modified;
                 techTestDataBase.SaveChanges();
 
-                return RedirectToAction("Index");
+                return Json(new { status = "Person was updated!" });
             }
         }
     }
