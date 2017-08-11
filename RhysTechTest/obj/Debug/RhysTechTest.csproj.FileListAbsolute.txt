@@ -151,4 +151,3 @@ C:\Users\rdais\OneDrive\Documents\Visual Studio 2017\Projects\TechTest\RhysTechT
 C:\Users\rdais\OneDrive\Documents\Visual Studio 2017\Projects\TechTest\RhysTechTest\bin\Microsoft.AI.Web.xml
 C:\Users\rdais\OneDrive\Documents\Visual Studio 2017\Projects\TechTest\RhysTechTest\obj\Debug\RhysTechTest.dll
 C:\Users\rdais\OneDrive\Documents\Visual Studio 2017\Projects\TechTest\RhysTechTest\obj\Debug\RhysTechTest.pdb
-C:\Users\rdais\OneDrive\Documents\Visual Studio 2017\Projects\TechTest\RhysTechTest\obj\Debug\RhysTechTest.csprojResolveAssemblyReference.cache

@@ -18,7 +18,7 @@
 					<td><a ng-click="setCurrentPerson(person)">{{ person.FirstName }} {{ person.LastName }}</a></td>
 					<td ng-class="{red: person.IsAuthorised==false, green: person.IsAuthorised==true}">{{ person.IsAuthorised ? "Yes" : "no" }}</td>
 					<td ng-class="{red: person.IsEnabled==false, green: person.IsEnabled==true}">{{ person.IsEnabled ? "Yes" : "no" }}</td>
-					<td>{{ person.Colours }}</td>
+					<td ng-repeat="colour in person.Colours">{{ colour }}</td>					
 				</tr>
 			</tbody>
 		</table>
@@ -33,11 +33,11 @@
 		<input type="checkbox" ng-model="person.IsEnabled"/>
 		<h3>Favourite Colours</h3>
 		<label>Blue</label>
-		<input type="checkbox" />
+		<input type="checkbox" ng-model="LikesBlue" />
 		<label>Green</label>
-		<input type="checkbox" />
+		<input type="checkbox" ng-model="LikesGreen"/>
 		<label>Red</label>
-		<input type="checkbox" />
+		<input type="checkbox" ng-model="LikesRed"/>
 		<button>Save Changes</button>
 		<button>Cancel</button>
 	</div>
