@@ -1,4 +1,4 @@
-﻿var peopleControllers = angular.module('myApp', [])
+﻿var peopleControllers = angular.module('peopleControllers', [])
 
 peopleControllers.controller('ListController', function ($scope, $http) {
 

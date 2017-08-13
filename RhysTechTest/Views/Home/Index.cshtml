@@ -3,45 +3,7 @@
 	ViewBag.Title = "Home Page";
 }
 <section ng-view>
-		@*<div id="personList" ng-controller="ListController">
-				<table>
-					<thead>
-						<tr>
-							<th>Name</th>
-							<th>Authorised</th>
-							<th>Enabled</th>
-							<th>Colours</th>		
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="person in people">
-							<td><a ng-click="setCurrentPerson(person)">{{ person.FirstName }} {{ person.LastName }}</a></td>
-							<td ng-class="{red: person.IsAuthorised==false, green: person.IsAuthorised==true}">{{ person.IsAuthorised ? "Yes" : "no" }}</td>
-							<td ng-class="{red: person.IsEnabled==false, green: person.IsEnabled==true}">{{ person.IsEnabled ? "Yes" : "no" }}</td>
-							<td ng-repeat="colour in person.Colours">{{ colour }}</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>*@
 
-	<div id="editForm">
-		<h2>Update {{person.FirstName}}  {{person.LastName}}</h2>
-		<h3>User Details</h3>
-		<label hidden="hidden">{{person.PersonId}}</label>
-		<label>Authorised</label>
-		<input type="checkbox" ng-model="person.IsAuthorised"/>
-		<label>Enabled</label>
-		<input type="checkbox" ng-model="person.IsEnabled"/>
-		<h3>Favourite Colours</h3>
-		<label for="blueCheck">Blue</label>
-		<input name="blueCheck" id="blueCheck" type="checkbox" ng-model="LikesBlue" />
-		<label for="greenCheck">Green</label>
-		<input name="greenCheck" id="greenCheck"type="checkbox" ng-model="LikesGreen"/>
-		<label for="redCheck">Red</label>
-		<input name="redCheck" id="redCheck" type="checkbox" ng-model="LikesRed"/>
-		<button>Save Changes</button>
-		<button>Cancel</button>
-	</div>
 </section>
 <style>
 	.red {
