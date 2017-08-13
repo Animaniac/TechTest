@@ -16,9 +16,8 @@ namespace RhysTechTest.Controllers
 
         public ActionResult GetAllPeople()
         {
-            //, LikesGreen = p.Colours.ToString().Contains("Green")
-            var techTestDataBase = new TechTestEntities();
-            var peoplesData = techTestDataBase.People.Select(p => new { p.PersonId, p.FirstName, p.LastName, p.IsAuthorised, Colours = p.Colours.Select(c => c.Name),p.IsEnabled }).ToList();
+            var peoplesData = techTestDataBase.People.Select(p => new { p.PersonId, p.FirstName, p.LastName, p.IsAuthorised, Colours = p.Colours.Select(c => c.Name), p.IsEnabled }).ToList();
+            //var peoplesData = techTestDataBase.People.ToList();
             return Json(peoplesData, JsonRequestBehavior.AllowGet);
         }
         

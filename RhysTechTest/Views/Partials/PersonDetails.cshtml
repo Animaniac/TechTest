@@ -1,0 +1,18 @@
+﻿<div id="detailsForm">
+	<h2>Update {{person.FirstName}}  {{person.LastName}}</h2>
+	<h3>User Details</h3>
+	<label hidden="hidden">{{person.PersonId}}</label>
+	<label>Authorised</label>
+	<input type="checkbox" ng-model="person.IsAuthorised" />
+	<label>Enabled</label>
+	<input type="checkbox" ng-model="person.IsEnabled" />
+	<h3>Favourite Colours</h3>
+	<label for="blueCheck">Blue</label>
+	<input name="blueCheck" id="blueCheck" type="checkbox" ng-model="LikesBlue" />
+	<label for="greenCheck">Green</label>
+	<input name="greenCheck" id="greenCheck" type="checkbox" ng-model="LikesGreen" />
+	<label for="redCheck">Red</label>
+	<input name="redCheck" id="redCheck" type="checkbox" ng-model="LikesRed" />
+	<button>Save Changes</button>
+	<button>Cancel</button>
+</div>
